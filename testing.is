@@ -1,0 +1,61 @@
+
+buatkan nama: teks = "elang"
+tetapkan umur: angka = 15
+variabel tinggi: angka = 165
+
+antarmuka User<[T, K diperluasKe Teks, T]> {
+    name: teks,
+    hanyaDibaca data: T,
+    API: {
+        url: [T, K]
+    }
+}
+
+buatkan tipe Data = apapun
+
+tetapkan tipe Users<[T]> = {
+    name: teks;
+    data: T;
+}
+
+buatkan enum dataUsers {
+    name = nama,
+    data = {
+        umur: umur,
+        tinggi: tinggi
+    }
+}
+
+fungsi tampilkanData(data: apapun): kosong
+    console.log(data)
+berakhir
+
+kelas kalkulator
+    konstruktor(a: angka, b: angka): kosong
+        simpan.angka = [a, b]
+    berakhir
+
+    add(): angka
+        kembalikan simpanan.angka[0] + simpanan.angka[1]
+    berakhir
+berakhir
+
+// baru
+
+kelas Kalkukator diperluasKe kalkulator
+    minus(): angka
+        kembalikan simpanan.angka[0] - simpanan.angka[1]
+    berakhir
+
+    kali(): kamus[teks, daftar[angka | teks]]
+        kembalikan {hasil: simpanan.angka[0] ** simpanan.angka[1]}
+    berakhir
+berakhir
+
+(panggil Kalkukator(10, 10)).add()
+buatkan Kals: Kalkukator = panggil Kalkukator(10, 10)
+Kals.add()
+
+Kals.kali().?hasil
+Kals.kali().hasil
+
